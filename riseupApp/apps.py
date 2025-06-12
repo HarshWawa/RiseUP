@@ -7,6 +7,11 @@ from torch import cuda
 device='cuda' if cuda.is_available() else 'cpu'
 from transformers import BertTokenizer
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv() 
+
 from ultralytics import YOLO
 
 # from nltk.corpus import stopwords
@@ -71,9 +76,9 @@ class AIModelConfig(AppConfig):
     print(f"Personality Model Loaded Successfully !!")
 
     # +-+-+-+-+-+-+-+-+-+- API KEY +-+-+-+-+-+-+-+-+-+-
-    apiKey1 = "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"
-    apiKey2 = "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"
-    apiKey3 = "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"
+    apiKey1 = os.environ.get("API_KEY1")
+    apiKey2 = os.environ.get("API_KEY2")
+    apiKey3 = os.environ.get("API_KEY3")
 
     
     # +-+-+-+-+-+-+-+-+-+- LLM MODELS +-+-+-+-+-+-+-+-+-+-
