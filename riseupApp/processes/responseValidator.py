@@ -2,7 +2,12 @@ from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-apikey="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"
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+apikey=os.environ.get("API_KEY1")
 
 
 llm = ChatGroq(
