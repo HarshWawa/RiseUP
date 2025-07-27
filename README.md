@@ -130,7 +130,7 @@ python manage.py runserver
 ## 📈 Screenshot
 
 > System architecture
-> ![architecture](reference/arch.png)
+> ![architecture](References/arch.png)
 
 
 ---
